@@ -1,65 +1,68 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
-    <groupId>com.airhacks</groupId>
-    <artifactId>javaee7-essentials-pom</artifactId>
-    <version>7.0</version>
-    <packaging>war</packaging>
-    <dependencies>
-        <dependency>
-            <groupId>javax</groupId>
-            <artifactId>javaee-api</artifactId>
-            <version>7.0</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.postgresql</groupId>
-            <artifactId>postgresql</artifactId>
-            <version>9.3.22</version>
-        </dependency>
-        <dependency>
-            <groupId>org.jscience</groupId>
-            <artifactId>jscience</artifactId>
-            <version>4.3.1</version>
-        </dependency>
-        <dependency>
-            <groupId>org.json</groupId>
-            <artifactId>json</artifactId>
-            <version>20090211</version>
-        </dependency>     
-    </dependencies>
-    <build>
-        <finalName>${project.artifactId}</finalName>
-    </build>
-    <properties>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.airhacks</groupId>
+	<artifactId>javaee7-essentials-pom</artifactId>
+	<version>7.0</version>
+	<packaging>war</packaging>
+	<dependencies>
+		<dependency>
+			<groupId>javax</groupId>
+			<artifactId>javaee-api</artifactId>
+			<version>7.0</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+			<version>9.3.22</version>
+		</dependency>
+		<dependency>
+			<groupId>org.jscience</groupId>
+			<artifactId>jscience</artifactId>
+			<version>4.3.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.json</groupId>
+			<artifactId>json</artifactId>
+			<version>20090211</version>
+		</dependency>
+	</dependencies>
+	<build>
+		<finalName>${project.artifactId}</finalName>
+	</build>
+	<properties>
 		<plugins>
 			<plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-dependency-plugin</artifactId>
-            <version>2.3</version>
-            <executions>
-                <execution>
-                    <phase>package</phase>
-                    <goals><goal>copy</goal></goals>
-                    <configuration>
-                        <artifactItems>
-                            <artifactItem>
-                         <groupId>com.github.jsimone</groupId>
-                        <artifactId>webapp-runner</artifactId>
-                                <version>8.0.30.2</version>
-                     <destFileName>webapp-runner.jar</destFileName>
-                            </artifactItem>
-                        </artifactItems>
-                    </configuration>
-                </execution>
-            </executions>
-        </plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-dependency-plugin</artifactId>
+				<version>2.3</version>
+				<executions>
+					<execution>
+						<phase>package</phase>
+						<goals>
+							<goal>copy</goal>
+						</goals>
+						<configuration>
+							<artifactItems>
+								<artifactItem>
+									<groupId>com.github.jsimone</groupId>
+									<artifactId>webapp-runner</artifactId>
+									<version>8.0.30.2</version>
+									<destFileName>webapp-runner.jar</destFileName>
+								</artifactItem>
+							</artifactItems>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
 		</plugins>
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>
-        <failOnMissingWebXml>false</failOnMissingWebXml>
-    </properties>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+		<failOnMissingWebXml>false</failOnMissingWebXml>
+	</properties>
 </project>
 
 
