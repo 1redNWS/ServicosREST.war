@@ -1,1 +1,1 @@
-web: java -Dserver.port=$PORT $JAVA_OPTS -jar target/ServicosREST.war
+web: java $JAVA_OPTS -jar plugin/dependency/webapp-runner.jar --port $PORT target/*.war
